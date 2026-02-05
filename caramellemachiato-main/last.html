@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bihal's Video Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(-43deg, #ff6b6b, #feca57, #48dbfb, #5f27cd);
+      background-size: 400% 400%;
+      animation: bgShift 15s ease infinite, hueShift 30s linear infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+    }
+
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes hueShift {
+      from { filter: hue-rotate(0); }
+      to { filter: hue-rotate(360deg); }
+    }
+
+    .video-wrapper {
+      width: 43vw;
+      height: 68vh;
+      border: 5px solid #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+      transition: transform 0.3s ease;
+      background-color: black;
+    }
+
+    .video-wrapper:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 35px rgba(255, 255, 255, 0.8);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #ffd;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="video-wrapper">
+  <iframe 
+    src="https://www.youtube.com/embed/DzZvS16Kqlg?autoplay=1&rel=0&modestbranding=1&controls=0" 
+    allow="autoplay; encrypted-media" 
+    allowfullscreen>
+  </iframe>
+</div>
+  <div class="footer">
+    Created with 💖 by <a href="https://instagram.com/realnihal" target="_blank">Bihal</a>
+  </div>
+
+</body>
+</html>
